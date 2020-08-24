@@ -1,7 +1,8 @@
 import React from 'react';
+import Container from './Components/container';
 
 function App() {
-  return <div>Insert your code here...</div>;
+  return <Container />;
 }
 
 export default App;
