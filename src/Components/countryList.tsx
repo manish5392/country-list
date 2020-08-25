@@ -25,8 +25,6 @@ const CountryList = (props: props) => {
         setShow(false)
     }
 
-  
-
     useEffect(()=>{
          const index=clickedItem;
          let modalData;
@@ -41,8 +39,6 @@ const CountryList = (props: props) => {
              modalData=items[index];
              languageData=modalData.languages;
              currencyData=modalData.currencies;
-            console.log(languageData)
-
          }
         setLang(languageData);
         setCurrency(currencyData);

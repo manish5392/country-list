@@ -20,8 +20,6 @@ export const useSortData = (items:any, config: any = null) => {
                 return 0;
 
             })
-
-
         }
 
         return sortableItems
@@ -30,7 +28,7 @@ export const useSortData = (items:any, config: any = null) => {
     const requestSort= (key:string)=>{
 
         let direction='asc';
-        if(sortConfig&& sortConfig.key===key&&sortConfig.direction==='asc'){
+        if(sortConfig && sortConfig.key === key&&sortConfig.direction === 'asc'){
             direction='dsc';
         }
         setSortConfig({key,direction})

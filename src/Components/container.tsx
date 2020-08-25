@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import CountryList from './countryList';
 
 import './style.css';
-export interface props {
-    name:string,
-
-}
 
 function Container() {
 
@@ -24,10 +20,7 @@ function Container() {
                 setLoading(false)
             })
             .catch(err=>console.log(err))
-    }, [])
-
-
-
+    }, []);
 
     useEffect(()=>{
         const value=searchText;
@@ -35,7 +28,6 @@ function Container() {
         const lowerCaseValue=value.toLowerCase().trim();
         if (lowerCaseValue===''){
             setData(result)
-            console.log(result)
         }
         else{
             const filteredData=result.filter((item:any)=> {
@@ -44,15 +36,10 @@ function Container() {
                     filterProperty.includes(key)? item[key].toString().toLowerCase().includes(lowerCaseValue) :false)
             })
 
-            setData(filteredData)
+            setData(filteredData);
 
-            console.log(filteredData);
         }
-
-
-
-
-    },[searchText,result])
+    },[searchText, result])
 
 
     if(loading){
